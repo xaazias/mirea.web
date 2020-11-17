@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика 2.6</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content-container">
+        <div class="inner-item">
+            <progress max="100" value="70" id="my-progress"></progress>
+            <p id="p-progress">Progress - 70%</p>
+            <button class="changeValueButton" onclick="addProgress()" style="left: 45px;">+10</button>
+        </div>
+        <div class="inner-item">
+            <meter max="100" value="10" id="my-meter"></meter>
+            <p id="p-meter">Meter - 10%</p>
+            <button class="changeValueButton" onclick="addMeter()" style="left: 7.5px;">+10</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

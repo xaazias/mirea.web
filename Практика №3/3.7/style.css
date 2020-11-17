@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.content-container {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.25);
+    background: rgb(40, 44, 52);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.inner-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 300px;
+    width: 300px;
+}
+
+.inner-item:hover {
+    transition: 0.1s;
+    color:#e6e6e6;
+}
+
+.underform-title {
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.inner-item p {
+    position: relative;
+    left: 40px;
+    top: 22px;
+    margin: 12px;
+}
+
+caption {
+    display: table-caption;
+    text-align: center;
+}
+
+.chess {
+    border: solid 1px #fff;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 250px;
+    left: 70px;
+}
+
+.chess tr:nth-child(odd) td:nth-child(odd) {
+	background: #fff;
+}	
+.chess tr:nth-child(even) td:nth-child(even) {
+	background: #fff;
+}
