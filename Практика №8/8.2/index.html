@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+        .content {
+            padding: 15px 20px;
+            margin: auto;
+            background: #08101c;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        } 
+        .anim-textarea {
+            font-family: 'Montserrat', sans-serif;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .btn {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            width: 100%;
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
+            color: #fff;
+            border: none;
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function animate(options) {
+
+            let start = performance.now();
+        
+            requestAnimationFrame(function animate(time) {
+                let timeFraction = (time - start) / options.duration;
+                if (timeFraction > 1) timeFraction = 1;
+        
+                let progress = options.timing(timeFraction)
+                options.draw(progress);
+        
+                if (timeFraction < 1) requestAnimationFrame(animate);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="content" id="contents">
+        <div>
+            <textarea class="anim-textarea" id="animTextArea" rows="10" cols="60">Анимация набирающегося текста с помощью JavaScript и эффекта "bounce"...</textarea><br>
+            <button class="btn" onclick="animateTextInput(animTextArea)">Запустить анимацию</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

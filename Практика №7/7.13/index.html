@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+        .content {
+            padding: 10px 20px;
+            margin: auto;
+            width: 400px;
+            background: #08101c;
+            border-radius: 10px;
+        } 
+        .pg {
+            border: solid 1px #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        .tooltip {
+            position: fixed;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            text-align: center;
+            color: #eee;
+            background:  rgba(0, 0, 0, 0.9);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="elem">
+       <p class="pg" data-tooltip="Подсказка #1">Элемент 1</p>
+       <p class="pg" data-tooltip="Подсказка #2">Элемент 2</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
